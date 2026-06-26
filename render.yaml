@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: minimax-m27-api
+    runtime: docker
+    region: oregon
+    plan: starter
+    healthCheckPath: /
+    envVars:
+      - key: NVIDIA_API_KEY
+        sync: false
+    dockerfilePath: ./Dockerfile
